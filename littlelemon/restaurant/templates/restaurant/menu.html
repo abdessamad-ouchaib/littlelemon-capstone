@@ -1,0 +1,25 @@
+{% extends 'restaurant/base.html' %}
+{% block title %}| Menu{% endblock %}
+{% block content %}
+<div class="hero">
+    <h1>Our Menu</h1>
+    <p>Fresh Mediterranean dishes crafted daily.</p>
+</div>
+<div class="container">
+    {% if menu %}
+    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap:1.5rem; margin-top:2rem;">
+        {% for item in menu %}
+        <a href="/restaurant/menu/{{ item.pk }}/" style="text-decoration:none;">
+            <div style="background:white; border-radius:12px; padding:1.5rem; box-shadow:0 2px 8px rgba(0,0,0,0.07); transition:transform 0.2s;">
+                <h3 style="color:#495E57;">{{ item.name }}</h3>
+                <p style="margin-top:0.5rem; color:#777; font-size:0.95rem;">{{ item.menu_item_description }}</p>
+                <p style="margin-top:1rem; font-size:1.3rem; font-weight:700; color:#F4CE14;">${{ item.price }}</p>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p style="text-align:center; margin-top:3rem; color:#777;">No menu items available yet. Add some via the admin panel.</p>
+    {% endif %}
+</div>
+{% endblock %}

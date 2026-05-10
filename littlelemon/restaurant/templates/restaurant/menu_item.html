@@ -1,0 +1,16 @@
+{% extends 'restaurant/base.html' %}
+{% block title %}| {{ menu_item.name }}{% endblock %}
+{% block content %}
+<div class="container" style="margin-top:3rem;">
+    {% if menu_item %}
+    <div style="background:white; border-radius:12px; padding:2.5rem; box-shadow:0 2px 8px rgba(0,0,0,0.07); max-width:600px; margin:auto;">
+        <a href="/restaurant/menu/" style="color:#495E57; text-decoration:none; font-size:0.9rem;">← Back to Menu</a>
+        <h1 style="color:#495E57; margin-top:1rem;">{{ menu_item.name }}</h1>
+        <p style="margin-top:1rem; line-height:1.7; color:#555;">{{ menu_item.menu_item_description }}</p>
+        <p style="margin-top:1.5rem; font-size:2rem; font-weight:800; color:#F4CE14;">${{ menu_item.price }}</p>
+    </div>
+    {% else %}
+    <p>Menu item not found.</p>
+    {% endif %}
+</div>
+{% endblock %}

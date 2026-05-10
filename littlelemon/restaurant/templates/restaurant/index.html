@@ -1,0 +1,28 @@
+{% extends 'restaurant/base.html' %}
+{% block title %}| Home{% endblock %}
+{% block content %}
+<div class="hero">
+    <h1>Little Lemon</h1>
+    <p>We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+    <p style="margin-top:1.5rem; color:#F4CE14; font-size:1rem;">Chicago, Illinois</p>
+</div>
+<div class="container">
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:2rem; margin-top:2rem;">
+        <div style="background:white; border-radius:12px; padding:2rem; box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+            <h2 style="color:#495E57;">🥗 Fresh Ingredients</h2>
+            <p style="margin-top:1rem; line-height:1.6;">Every dish is prepared daily with the freshest local and imported Mediterranean ingredients.</p>
+        </div>
+        <div style="background:white; border-radius:12px; padding:2rem; box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+            <h2 style="color:#495E57;">🍽️ Reserve a Table</h2>
+            <p style="margin-top:1rem; line-height:1.6;">Book your table online via our API and enjoy a memorable dining experience with family and friends.</p>
+        </div>
+        <div style="background:white; border-radius:12px; padding:2rem; box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+            <h2 style="color:#495E57;">🌿 Seasonal Menu</h2>
+            <p style="margin-top:1rem; line-height:1.6;">Our menu changes with the seasons to bring you the very best flavours all year round.</p>
+        </div>
+    </div>
+    <div style="margin-top:3rem; text-align:center;">
+        <a href="/restaurant/menu/" style="background:#F4CE14; color:#333; padding:0.9rem 2.5rem; border-radius:8px; text-decoration:none; font-weight:700; font-size:1.1rem;">View Our Menu</a>
+    </div>
+</div>
+{% endblock %}

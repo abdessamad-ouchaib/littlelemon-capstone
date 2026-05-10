@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Little Lemon {% block title %}{% endblock %}</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; color: #333; }
+        nav { background: #495E57; padding: 1rem 2rem; display: flex; align-items: center; gap: 2rem; }
+        nav a { color: #F4CE14; text-decoration: none; font-weight: 600; font-size: 1rem; }
+        nav a:hover { text-decoration: underline; }
+        nav .brand { font-size: 1.5rem; color: #F4CE14; font-weight: 800; margin-right: auto; }
+        .hero { background: #495E57; color: white; padding: 4rem 2rem; text-align: center; }
+        .hero h1 { font-size: 3rem; color: #F4CE14; }
+        .hero p  { font-size: 1.2rem; margin-top: 1rem; color: #EDEFEE; }
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+        footer { background: #333; color: #ccc; text-align: center; padding: 1.5rem; margin-top: 4rem; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+<nav>
+    <span class="brand">🍋 Little Lemon</span>
+    <a href="/restaurant/">Home</a>
+    <a href="/restaurant/about/">About</a>
+    <a href="/restaurant/menu/">Menu</a>
+</nav>
+{% block content %}{% endblock %}
+<footer>© 2024 Little Lemon Restaurant – Chicago</footer>
+</body>
+</html>
