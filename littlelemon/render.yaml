@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: littlelemon-api
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn capstone.wsgi:application"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: "*"
+      - key: DATABASE_URL
+        sync: false
+      - key: DB_SSL_REQUIRE
+        value: "True"
